@@ -23,11 +23,9 @@
     }
     var p = new Graph('id_canvas_1');
 
-    conf = {
+    p.load({
         background: 'gray',
-    };
-
-    p.load([{
+        elements: [{
         cor: "#F00",
         nome: "Teste",
         valor: 25,
@@ -36,29 +34,29 @@
     {
         nome: "Teste 2",
         funcao: funcao,
-    },{}], conf);
+    },{}]});
 
     p.rosca();
     p.setAnotation(true);
     p.draw();
 
     var r = new Graph('id_canvas_2');
-    r.load([{},{},{}]);
+    r.load({elements: [{},{},{}]});
     r.barra();
     r.draw();
 
     var r = new Graph('id_canvas_3');
-    r.load([{},{},{}]);
+    r.load({elements: [{},{},{}]});
     r.pontos();
     r.draw();
 
     var r = new Graph('id_canvas_4');
-    r.load([{},{},{}]);
+    r.load({elements: [{},{},{}]});
     r.linha();
     r.draw();
 
     var r = new Graph('id_canvas_5');
-    r.load([{},{},{}]);
+    r.load({elements: [{},{},{}]});
     r.pizza();
     r.draw();
 

@@ -69,7 +69,7 @@ Graph.prototype.getValues = function () {
 }
 
 Graph.prototype.setAnotation = function (value) {
-    if (this.tipo == 'rosca' && typeof value === "boolean")
+    if (this.tipo === 'rosca' && typeof value === "boolean")
         this.anotation = value;
     else
         console.log('Error in set anotation.');
@@ -233,11 +233,17 @@ Graph.prototype.mouseFora = function (event) {
     this.drawSpecific(this.selec);
 }
 
-Graph.prototype.load = function (dados, conf = {}) {
+Graph.prototype.load = function (options) {
     this.maior = 0;
-    let def_conf = { background: 'white' };
-    this.conf = extend(def_conf, conf);
-    for (var v in dados) {
+    if (!options.hasOwnProperty('elements')) {
+        console.log("Error in load elements! No have elements to load.");
+        return;
+    }
+    let def_conf = {
+        background: 'white',
+    };
+    this.conf = extend(def_conf, options);
+    for (var v in options.elements) {
         def = {
             cor: '#' + ("000000" + Math.floor(Math.random() * 16777215).toString(16)).slice(-7, -1),
             nome: "Item " + v,
@@ -245,16 +251,16 @@ Graph.prototype.load = function (dados, conf = {}) {
             funcao: null,
             cor_borda: null,
         }
-        dados[v] = extend(def, dados[v]);
-        this.total += dados[v].valor;
-        if (this.maior < dados[v].valor) this.maior = dados[v].valor;
+        options.elements[v] = extend(def, options.elements[v]);
+        this.total += options.elements[v].valor;
+        if (this.maior < options.elements[v].valor) this.maior = options.elements[v].valor;
         this.fatia[v] = {
             obj: new Path2D(),
-            cor: dados[v].cor,
-            nome: dados[v].nome,
-            valor: dados[v].valor,
-            funcao: dados[v].funcao,
-            cor_borda: dados[v].cor_borda,
+            cor: options.elements[v].cor,
+            nome: options.elements[v].nome,
+            valor: options.elements[v].valor,
+            funcao: options.elements[v].funcao,
+            cor_borda: options.elements[v].cor_borda,
         };
     }
 }
@@ -268,7 +274,7 @@ Graph.prototype.draw = function () {
         this.drawSpecific(v);
     }
     this.ctx.beginPath();
-    if (this.tipo == 'rosca') {
+    if (this.tipo === 'rosca') {
         this.area_interna = new Path2D();
         this.area_interna.arc(this.center_x, this.center_y, (this.radius / 2), 0, 2 * Math.PI, false);
         this.ctx.fillStyle = this.conf.background;
@@ -278,27 +284,27 @@ Graph.prototype.draw = function () {
 }
 
 Graph.prototype.drawSpecific = function (value) {
-    if (value == -1) {
+    if (value === -1) {
         this.draw();
         return;
     }
     this.ctx.beginPath();
     this.ctx.fillStyle = this.fatia[value].cor;
-    if (this.selec == value) {
+    if (this.selec === value) {
         this.ctx.filter = "brightness(150%)";
     }
-    if (this.tipo == 'linha') {
+    if (this.tipo === 'linha') {
         this.ctx.strokeStyle = this.fatia[value].cor_borda != null ? this.fatia[value].cor_borda : 'black';
         this.ctx.stroke(this.fatia[value].obj);
     } else {
         this.ctx.strokeStyle = this.fatia[value].cor_borda != null ? this.fatia[value].cor_borda : 'white';
     }
     this.ctx.fill(this.fatia[value].obj);
-    if (this.tipo != 'linha') this.ctx.stroke(this.fatia[value].obj);
-    if (this.selec == value) {
+    if (this.tipo !== 'linha') this.ctx.stroke(this.fatia[value].obj);
+    if (this.selec === value) {
         this.ctx.filter = "brightness(100%)";
     }
-    if (this.tipo == 'rosca') {
+    if (this.tipo === 'rosca') {
         this.area_interna = new Path2D();
         this.area_interna.arc(this.center_x, this.center_y, (this.radius / 2), 0, 2 * Math.PI, false);
         this.ctx.fillStyle = this.conf.background;
