@@ -41,7 +41,7 @@ Então em sua aplicação na seção javascript deve-se fazer a chamada da bibli
 ```
 Este simples código mostrará algo como:
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_chart.png"></img>
+![alt text][pizza]
 
 > _Note que: O tamanho e cores das fatias podem variar de acordo com que a página é atualizada, isso decorre das fatias que não tiveram valores definidos, logo, para elas é definido uma definição aleatória, exceto para aquelas que tiveram suas definições estritamente definidas._
 
@@ -51,7 +51,7 @@ O plugin dispõe de diversas funções de acordo com o gráfico desejado. A tabe
 
 |Função|Parâmetros|Descrição|
 |------|:--------:|:--------|
-|Graph()|    -    |Inicia a instânciação do gráfico|
+|**Graph()**|    -    |Inicia a instânciação do gráfico|
 |my_graph.**load(_object_)**|Objeto de definição, contendo os seguintes atributos { **background**: _cor de fundo_, **elements**: _vetor de elementos_}|Carrega os valores ao gráfico|
 |my_graph.**pizza()**| - |Define o modo do gráfico para gráfico do tipo pizza|
 |my_graph.**rosca()**| - |Define o modo do gráfico para gráfico do tipo rosca|
@@ -72,8 +72,8 @@ var obj = {
   elements: [
     {
       cor: "#F00",             //opcional, default: aleatória
-      nome: "Teste",           //opcional, defaltt: Item x, onde x é o índice no vetor de elementos
-      valor: 25,               //opcional, defaltt: random de 0 a 100
+      nome: "Teste",           //opcional, default: Item x, onde x é o índice no vetor de elementos
+      valor: 25,               //opcional, default: random de 0 a 100
     },
     ...                        //outros elementos
   ]
@@ -84,21 +84,32 @@ var obj = {
 
 ## Pizza
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_chart.png"></img>
+![alt text][pizza] ![alt text][pizza_gif]
 
 ## Rosca
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_chart.png"></img>
+![alt text][rosca] ![alt text][rosca_gif]
 
 ## Barra
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/bar_graph.png"></img>
+![alt text][barra] ![alt text][barra_gif]
 
 ## Linha
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_graph.png"></img>
+![alt text][linha] ![alt text][linha_gif]
 
 ## Pontos
 
-<img src="https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_graph.png"></img>
+![alt text][pontos] ![alt text][pontos_gif]
 
+[pizza]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_chart.png "Gráfico tipo Pizza"
+[rosca]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_chart.png "Gráfico tipo Rosca"
+[barra]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/bar_graph.png "Gráfico tipo Barra"
+[linha]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_graph.png "Gráfico tipo Linha"
+[pontos]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_graph.png "Gráfico tipo Pontos"
+
+[pizza_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_gif.gif "Gráfico tipo Pizza"
+[rosca_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_gif.gif "Gráfico tipo Rosca"
+[barra_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/bar_gif.gif "Gráfico tipo Barra"
+[linha_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_gif.gif "Gráfico tipo Linha"
+[pontos_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_gif.gif "Gráfico tipo Pontos"
