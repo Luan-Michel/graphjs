@@ -11,10 +11,10 @@
 <body>
     <div>
         <canvas id="id_canvas_1" width="300" height="300"></canvas>
-        <!-- <canvas id="id_canvas_2" width="300" height="300"></canvas>
+        <canvas id="id_canvas_2" width="300" height="300"></canvas>
         <canvas id="id_canvas_3" width="300" height="300"></canvas>
         <canvas id="id_canvas_4" width="300" height="300"></canvas>
-        <canvas id="id_canvas_5" width="300" height="300"></canvas> -->
+        <canvas id="id_canvas_5" width="300" height="300"></canvas>
     </div>
 </body>
 <script type="text/javascript">
@@ -24,9 +24,9 @@
     var p = new Graph('id_canvas_1');
 
     p.load({
-        // background: 'gray',
+        background: 'gray',
         elements: [{
-        cor: "#ff3333",
+        cor: "#F00",
         nome: "Teste",
         valor: 25,
         funcao: funcao,
@@ -56,7 +56,7 @@
     r.draw();
 
     var r = new Graph('id_canvas_5');
-    r.load({elements: [{cor: "#ff3333"},{ cor: "#4d4dff"},{cor: "#4dff4d"}]});
+    r.load({elements: [{},{},{}]});
     r.pizza();
     r.draw();
 
