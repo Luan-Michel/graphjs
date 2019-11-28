@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: A Plugin pure JS to make charts
+title: Graph JS
+description: A Plugin pure JS to make charts
 logo: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/logo.png
 show_downloads: true
