@@ -1,5 +1,5 @@
 # graphjs
-A pure js plugin for make charts
+A pure js plugin to make charts
 
 # Introdução
 
@@ -101,6 +101,11 @@ var obj = {
 ## Pontos
 
 ![alt text][pontos] ![alt text][pontos_gif]
+
+# Links e Referências
+
+[Gráfico de Pizza interativo em HTML5 usando JavaScript e Canvas](http://www.tidbits.com.br/grafico-de-pizza-interativo-em-html5-usando-javascript-e-canvas )
+
 
 [pizza]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_chart.png "Gráfico tipo Pizza"
 [rosca]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_chart.png "Gráfico tipo Rosca"
