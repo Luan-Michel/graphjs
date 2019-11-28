@@ -5,6 +5,10 @@ A pure js plugin to make charts
 
 Este plugin tem por objetivo facilitar o uso de gráficos em páginas web, utilizando apenas JavaScript. Ele dispõe de gráficos do tipo Pizza, Rosca, Pontos(WIP), Barras e Linha(WIP).
 
+## Demo
+
+Uma demonstração pode ser vista no arquivo de exemplo _\example\example.html_ ou no seguinte link [demo](https://luan-michel.github.io/graphjs/example/example).
+
 # Utilização básica
 
 Para a utilização do plugin deve-se fazer a importação do arquivo contendo o código _javascript_ **_graph.js_** no `head` de sua aplicação. Onde o _plugin_path_ é a pasta do plugin.
