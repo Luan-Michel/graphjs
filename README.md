@@ -1,4 +1,4 @@
-# graphjs
+# [graphjs](https://luan-michel.github.io/graphjs/)
 A pure js plugin to make charts
 
 # Introdução
@@ -47,7 +47,7 @@ Este simples código mostrará algo como:
 
 ![alt text][pizza]
 
-> _Note que: O tamanho e cores das fatias podem variar de acordo com que a página é atualizada, isso decorre das fatias que não tiveram valores definidos, logo, para elas é definido uma definição aleatória, exceto para aquelas que tiveram suas definições estritamente definidas._
+> _Note que: O tamanho e cores das fatias podem variar de acordo com que a página é atualizada, isso decorre das fatias que não tiveram valores definidos, logo, para elas é são definidos valores aleatória, exceto para aquelas que tiveram seus valores estritamente definidos._
 
 # Anatomia do Plugin
 
@@ -117,8 +117,8 @@ var obj = {
 [linha]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_graph.png "Gráfico tipo Linha"
 [pontos]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_graph.png "Gráfico tipo Pontos"
 
-[pizza_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_gif.gif "Gráfico tipo Pizza"
-[rosca_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_gif.gif "Gráfico tipo Rosca"
-[barra_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/bar_gif.gif "Gráfico tipo Barra"
-[linha_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_gif.gif "Gráfico tipo Linha"
-[pontos_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_gif.gif "Gráfico tipo Pontos"
+[pizza_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/pizza_gif.gif "Gráfico tipo Pizza - GIF"
+[rosca_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/donut_gif.gif "Gráfico tipo Rosca - GIF"
+[barra_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/bar_gif.gif "Gráfico tipo Barra - GIF"
+[linha_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/line_gif.gif "Gráfico tipo Linha - GIF"
+[pontos_gif]: https://raw.githubusercontent.com/Luan-Michel/graphjs/master/img/point_gif.gif "Gráfico tipo Pontos - GIF"
